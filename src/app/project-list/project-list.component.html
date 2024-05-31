@@ -1,0 +1,12 @@
+<mat-card>
+  <mat-card-content>
+    <mat-list [@listAnimation]="_projects.length">
+      @for (project of _projects; track project.id) {
+        <mat-list-item>
+          <span matListItemTitle>{{ project.name }}</span>
+          <span matListItemLine>{{ project.description }}</span>
+        </mat-list-item>
+      }
+    </mat-list>
+  </mat-card-content>
+</mat-card>
